@@ -3,6 +3,7 @@ import time,json,requests,random,datetime
 import campus
 
 def main():
+    mark = 1
     #定义变量
     success,failure=[],[]
     #sectets字段录入
@@ -102,7 +103,7 @@ def checkIn(userInfo,token):
                 "text": userInfo['classDescription']
             },
             #如果你来自其他学校，请自行打卡抓包修改地址字段
-            "areaStr": {"streetNumber":"","street":"长椿路辅路","district":"中原区","city":"郑州市","province":"河南省","town":"","pois":"河南工业大学(莲花街校区)","lng":113.55064699999795 + random.random()/1000,"lat":34.83870696238093 + random.random()/1000,"address":"中原区长椿路辅路河南工业大学(莲花街校区)","text":"河南省-郑州市","code":""},
+            "areaStr": {"streetNumber":"","street":"连芳南路","district":"呈贡区","city":"昆明市","province":"云南省","town":"","pois":"云南民族大学(呈贡校区)","lng":102.853005 + random.random()/1000,"lat":24.836967 + random.random()/1000,"address":"呈贡区连芳南路云南民族大学(呈贡校区)","text":"云南省-昆明市","code":""},
             "reportdate": round(time.time()*1000),
             "customerid": userInfo['customerId'],
             "deptid": userInfo['classId'],
